@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import ReactComponent from "./ReactComponent";
 import helloReact from "./CreateElementComponent";
 import ReactPureComponent from "./ReactPureComponent";
-import FunctionalComponent from "./ FunctionalComponent";
+import FunctionalComponent from "./FunctionalComponent";
 import Counter from "./Counter";
 import Search from "./SearchComponent";
 
