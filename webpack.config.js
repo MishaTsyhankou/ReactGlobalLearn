@@ -75,19 +75,22 @@ module.exports ={
                type: 'asset/resource',
            },
            {
-               test: /\.(jsx|js)$/,
+               test: /\.(jsx|js|ts|tsx)$/,
                exclude: /node_modules/,
                use: {
                    loader: 'babel-loader',
                    options: {
-                       presets: ['@babel/preset-env', ["@babel/preset-react", {"runtime": "automatic"}]]
+                       presets: ['@babel/preset-env', ["@babel/preset-react", {"runtime": "automatic"}], "@babel/preset-typescript"]
                    }
                }
-           }
+           },
+
+
+
 
        ],
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx', '.scss', '.tsx']
+        extensions: ['*', '.js', '.jsx', '.scss', '.tsx', '.ts']
     }
 }
