@@ -6,7 +6,8 @@
   "scripts": {
     "start": "export set NODE_ENV=dev&&webpack serve --open",
     "dev": "export set NODE_ENV=development&&webpack",
-    "build": "export set  NODE_ENV=production&&webpack"
+    "build": "export set  NODE_ENV=production&&webpack",
+    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
   },
   "husky": {
     "hooks": {
