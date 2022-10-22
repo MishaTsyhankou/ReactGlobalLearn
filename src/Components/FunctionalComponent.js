@@ -5,20 +5,8 @@ const FunctionalComponent = () => {
 
     console.log('Check Husky');
 
-
-
-
-
     const arr = ['check husky'];
 
-
-
-
     return <h1>{text}</h1>;
-
-
-
-
-
 };
 export default FunctionalComponent;
