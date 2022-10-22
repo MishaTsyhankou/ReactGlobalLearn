@@ -1,7 +1,6 @@
 import React from 'react';
 
-console.log("foooooooooo")
-
+console.log('foooooooooo');
 
 var X;
 
