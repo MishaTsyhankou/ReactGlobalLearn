@@ -6,20 +6,9 @@
   "scripts": {
     "start": "export set NODE_ENV=dev&&webpack serve --open",
     "dev": "export set NODE_ENV=development&&webpack",
-    "build": "export set  NODE_ENV=production&&webpack",
-    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html, scss, tsx}\""
+    "build": "export set  NODE_ENV=production&&webpack"
   },
-  "lint-staged": {
-    "src/**/*.{ts,css,html,tsx,scss}": [
-      "npm run prettier:check"
-    ],
-    "src/**/*.{ts,css,html,tsx,scss}": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+
   "browserslist": [
     "last 2 versions",
     "> 1%",
@@ -50,7 +39,7 @@
     "eslint-plugin-react": "^7.31.10",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.4.18",
@@ -72,5 +61,9 @@
     "cross-env": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,css,html,tsx,scss,jsx,js}": "prettier --write",
+    "src/**/*.{ts, js, tsx, jsx}": "eslint"
   }
 }
