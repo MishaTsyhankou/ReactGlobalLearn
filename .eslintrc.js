@@ -20,7 +20,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     rules: {
-        "no-console": "true",
+        "no-console": "off",
         "no-restricted-syntax": [
             "error",
             {
