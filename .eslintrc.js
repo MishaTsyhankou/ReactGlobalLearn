@@ -1,26 +1,26 @@
 module.exports = {
-    "env": {
+    env: {
         "browser": true,
         "es2021": true
     },
-    "extends": [
+    extends: [
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended"
     ],
-    "overrides": [
+    overrides: [
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [
+    plugins: [
         "react",
         "@typescript-eslint"
     ],
-    "rules": {
-        "no-console": "on",
+    rules: {
+        "no-console": "true",
         "no-restricted-syntax": [
             "error",
             {
