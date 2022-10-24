@@ -3,9 +3,7 @@ import React from 'react';
 const FunctionalComponent = () => {
     const text = 'Hello React Functional Component!!!!';
 
-    console.log('Check Husky');
-
-    const arr = ['check husky'];
+    const arr: [string] = ['check husky'];
 
     return <h1>{text}</h1>;
 };

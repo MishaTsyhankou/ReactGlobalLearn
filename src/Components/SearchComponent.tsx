@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import * as events from 'events';
 
 const Search = () => {
     const [searchValue, setSearch] = useState('');
     const [searchRequest, setSearchRequest] = useState('');
-    const handleSearch = (e) => {
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setSearch(e.target.value);
     };
     return (
