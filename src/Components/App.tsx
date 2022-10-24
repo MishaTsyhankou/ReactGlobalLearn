@@ -5,17 +5,21 @@ import ReactPureComponent from './ReactPureComponent';
 import FunctionalComponent from './FunctionalComponent';
 import Counter from './Counter';
 import Search from './SearchComponent';
+import Header from './Header';
 
 class App extends Component {
     render() {
         return (
             <>
-                {helloReact}
-                <ReactComponent />
-                <ReactPureComponent />
-                <FunctionalComponent />
-                <Counter />
-                <Search />
+                <div className="main">
+                    <Header />
+                    {helloReact}
+                    <ReactComponent />
+                    <ReactPureComponent />
+                    <FunctionalComponent />
+                    <Counter />
+                    <Search />
+                </div>
             </>
         );
     }

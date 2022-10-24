@@ -10,7 +10,7 @@ const Search = () => {
     };
     return (
         <>
-            <h1>Search Component:</h1>
+            <h1>Find Your Movie</h1>
 
             <div className="search">
                 <input
