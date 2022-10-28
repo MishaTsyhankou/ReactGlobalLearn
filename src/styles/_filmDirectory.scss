@@ -1,0 +1,68 @@
+.filmDirectory__wrap {
+    padding-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sort_result {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 3%;
+    color: #ffffff;
+}
+
+.filmItem__wrap {
+    width: 325px;
+    height: 520px;
+}
+
+.film__inform {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+    .film__title {
+        font-family: generalFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+
+        mix-blend-mode: normal;
+        opacity: 0.7;
+    }
+
+    .film__shrotDesc {
+        font-family: generalFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffffff;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+
+    .film__year {
+        box-sizing: border-box;
+        mix-blend-mode: normal;
+        width: 66px;
+        height: 26px;
+        opacity: 0.5;
+        border: 1px solid #979797;
+        border-radius: 4px;
+        font-family: generalFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #ffffff;
+        mix-blend-mode: normal;
+        opacity: 0.7;
+    }
+}

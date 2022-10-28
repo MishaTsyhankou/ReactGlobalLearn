@@ -6,6 +6,7 @@ import FunctionalComponent from './FunctionalComponent';
 import Counter from './Counter';
 import Search from './SearchComponent';
 import Header from './Header';
+import MainContent from './MainContent';
 
 class App extends Component {
     render() {
@@ -13,12 +14,8 @@ class App extends Component {
             <>
                 <div className="main">
                     <Header />
-                    {helloReact}
-                    <ReactComponent />
-                    <ReactPureComponent />
-                    <FunctionalComponent />
-                    <Counter />
-                    <Search />
+
+                    <MainContent />
                 </div>
             </>
         );

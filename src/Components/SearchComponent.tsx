@@ -2,7 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import * as events from 'events';
 
-const Search = () => {
+interface SearchProps {
+    header?: string;
+}
+
+const Search = ({ header }: SearchProps) => {
     const [searchValue, setSearch] = useState('');
     const [searchRequest, setSearchRequest] = useState('');
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -10,23 +14,25 @@ const Search = () => {
     };
     return (
         <>
-            <h1>Find Your Movie</h1>
+            <div className="search__wrap">
+                <div className="search__title">{header}</div>
 
-            <div className="search">
-                <input
-                    className="searchComponent"
-                    type="text"
-                    placeholder="What do you want to watch?"
-                    value={searchValue}
-                    onChange={handleSearch}
-                />
+                <div className="search">
+                    <input
+                        className="searchComponent"
+                        type="text"
+                        placeholder="What do you want to watch?"
+                        value={searchValue}
+                        onChange={handleSearch}
+                    />
 
-                <div onClick={() => setSearchRequest(searchValue)} className="searchButton">
-                    Search
+                    <div onClick={() => setSearchRequest(searchValue)} className="searchButton">
+                        Search
+                    </div>
                 </div>
-            </div>
 
-            <div className="searchResult">Your search request: {searchRequest}</div>
+                <div className="searchResult">Your search request: {searchRequest}</div>
+            </div>
         </>
     );
 };

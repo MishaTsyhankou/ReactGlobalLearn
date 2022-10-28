@@ -2,10 +2,23 @@
     width: 1200px;
     height: 396px;
     background-image: url('../images/headerBackground.png');
+    color: #ffffff;
+}
+
+.search__wrap {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .addMovie__button {
-    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: generalFont;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -19,4 +32,77 @@
 
     background: rgba(96, 96, 96, 0.68);
     border-radius: 4px;
+}
+
+.logo__wrap {
+    padding-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search {
+    padding-top: 2vh;
+    width: 900px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    input {
+        width: 600px;
+        height: 50px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: white;
+        background: rgba(50, 50, 50, 0.8);
+        mix-blend-mode: normal;
+        opacity: 0.7;
+        border-radius: 4px;
+    }
+}
+.searchButton {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #f65261;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: default;
+    &:hover {
+        background: peru;
+    }
+}
+
+.search__title {
+    display: flex;
+
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+.searchResult {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
 }

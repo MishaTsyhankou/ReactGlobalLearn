@@ -5,12 +5,14 @@ const Header = () => {
     return (
         <>
             <div className="header__wrap">
-                <div className="netflix__logo">netflixroulette</div>
-                <div className="addMovie">
-                    <div className="addMovie__button">+ ADD MOVIE</div>
+                <div className="logo__wrap">
+                    <div className="netflix__logo">netflixroulette</div>
+                    <div className="addMovie">
+                        <div className="addMovie__button">+ ADD MOVIE</div>
+                    </div>
                 </div>
 
-                <SearchComponent />
+                <SearchComponent header={'Find Your Movie'} />
             </div>
         </>
     );
