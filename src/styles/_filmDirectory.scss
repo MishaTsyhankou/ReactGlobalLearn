@@ -6,18 +6,32 @@
 }
 .sort_result {
     font-style: normal;
-    font-weight: 600;
+    display: flex;
+    font-family: generalFont;
     font-size: 20px;
     line-height: 24px;
     padding-left: 3%;
     color: #ffffff;
+    .film__count {
+        padding-right: 10px;
+        font-family: generalFontExtraBold;
+    }
 }
 
 .filmItem__wrap {
     width: 325px;
     height: 520px;
 }
-
+.film__img {
+    display: block;
+    width: 325px;
+    height: 450px;
+}
+.poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .film__inform {
     display: flex;
     flex-direction: row;

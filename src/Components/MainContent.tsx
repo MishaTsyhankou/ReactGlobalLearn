@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import FilmDirectory from './FilmDirectory';
 import Navigation from './Navigation';
-import SearchComponent from './SearchComponent';
+import ErrorBoundary from './ErrorBoundary';
 
 const MainContent = () => {
     return (
         <>
             <div className="mainContent__wrap">
                 <Navigation />
-                <FilmDirectory />
+                <ErrorBoundary>
+                    <FilmDirectory />
+                </ErrorBoundary>
             </div>
         </>
     );

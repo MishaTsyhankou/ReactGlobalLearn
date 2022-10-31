@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
 }
 
@@ -27,11 +27,16 @@
     text-transform: uppercase;
     width: 177px;
     height: 46px;
-
+    cursor: default;
     color: #f65261;
-
+    border: 1px solid rgba(96, 96, 96, 0.68);
     background: rgba(96, 96, 96, 0.68);
     border-radius: 4px;
+    &:hover {
+        color: #ffffff;
+        border: 1px solid #979797;
+        background: rgba(96, 96, 96, 0.9);
+    }
 }
 
 .logo__wrap {
@@ -39,6 +44,21 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+}
+.logo {
+    display: flex;
+    color: #f65261;
+
+    .netflix__logo__net {
+        font-size: 30px;
+        font-weight: 900;
+        font-family: generalFontExtraBold;
+    }
+    .netflix__logo__roul {
+        font-size: 30px;
+        font-family: generalFont;
+    }
 }
 
 .search {
@@ -53,6 +73,7 @@
         width: 600px;
         height: 50px;
         font-weight: 400;
+        font-family: generalFont;
         font-size: 20px;
         line-height: 24px;
         color: white;
@@ -67,6 +88,7 @@
     height: 60px;
     display: flex;
     justify-content: center;
+    font-family: generalFont;
     align-items: center;
     border-radius: 4px;
     background: #f65261;
@@ -77,16 +99,19 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+    border: 1px solid #f65261;
     cursor: default;
     &:hover {
         background: peru;
+        border: 1px solid #979797;
     }
 }
 
 .search__title {
+    width: 70%;
     display: flex;
-
     font-family: generalFont;
+    justify-content: flex-start;
     font-style: normal;
     font-weight: 300;
     font-size: 40px;

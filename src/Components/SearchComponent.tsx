@@ -30,8 +30,6 @@ const Search = ({ header }: SearchProps) => {
                         Search
                     </div>
                 </div>
-
-                <div className="searchResult">Your search request: {searchRequest}</div>
             </div>
         </>
     );
