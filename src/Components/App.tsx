@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
+import ErrorBoundary from './ErrorBoundary';
 
 class App extends Component {
     render() {
@@ -9,7 +10,9 @@ class App extends Component {
             <>
                 <div className="main">
                     <Header />
-                    <MainContent />
+                    <ErrorBoundary>
+                        <MainContent />
+                    </ErrorBoundary>
                     <Footer />
                 </div>
             </>

@@ -28,9 +28,9 @@
     width: 177px;
     height: 46px;
     cursor: default;
-    color: #f65261;
+    color: #ffff;
     border: 1px solid rgba(96, 96, 96, 0.68);
-    background: rgba(96, 96, 96, 0.68);
+    background: rgba(96, 96, 96, 0.9);
     border-radius: 4px;
     &:hover {
         color: #ffffff;
@@ -40,7 +40,7 @@
 }
 
 .logo__wrap {
-    padding-top: 5vh;
+    padding-top: 1vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -49,6 +49,7 @@
 .logo {
     display: flex;
     color: #f65261;
+    padding-right: 600px;
 
     .netflix__logo__net {
         font-size: 30px;

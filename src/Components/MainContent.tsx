@@ -8,9 +8,8 @@ const MainContent = () => {
         <>
             <div className="mainContent__wrap">
                 <Navigation />
-                <ErrorBoundary>
-                    <FilmDirectory />
-                </ErrorBoundary>
+
+                <FilmDirectory />
             </div>
         </>
     );
