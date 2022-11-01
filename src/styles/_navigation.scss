@@ -1,0 +1,114 @@
+.nav__wrap {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+}
+
+.genres__sorter__wrap {
+    display: flex;
+
+    .genre__block {
+        margin: 20px 10px 20px 10px;
+        font-family: generalFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        text-transform: uppercase;
+
+        color: #ffffff;
+    }
+}
+
+.usualSorter__wrap {
+    display: flex;
+}
+
+.usualSorter__block {
+    margin: 20px 10px 20px 10px;
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+.usualSorter__dropdown {
+    margin: 20px 10px 20px 10px;
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+.usualSorter {
+    margin: 20px 10px 20px 10px;
+    background-color: #232323;
+
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    height: 20px;
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+    border: none;
+    color: #ffffff;
+}
+
+.genres__sorter {
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 1;
+}
+
+.genres__sorter:hover {
+    opacity: 0.75;
+}
+
+.genres__sorter::before {
+    transition: 300ms;
+    height: 5px;
+    content: '';
+    position: absolute;
+    background-color: red;
+}
+
+.genres__sorter__ltr::before {
+    width: 0%;
+    bottom: 10px;
+}
+
+.genres__sorter__ltr:hover::before {
+    width: 100%;
+}

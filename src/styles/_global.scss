@@ -1,20 +1,26 @@
 $primaryColor: blue;
 $secondaryColor: blue;
-html{
-  font-family: generalFont;
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
 }
 
 h1 {
-  color: $primaryColor;
+    color: black;
 }
 
-.container{
-  &__subtitle {
-    color: $secondaryColor;
-    display: block;
-    height: 300px;
-    background: url("../images/webpack.png");
-    display: flex;
-    justify-content: center;
-  }
+.counter {
+    border: 1px solid red;
+    color: red;
+    h1 {
+        color: $secondaryColor;
+    }
 }

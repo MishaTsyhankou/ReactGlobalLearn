@@ -1,0 +1,134 @@
+.header__wrap {
+    width: 1200px;
+    height: 396px;
+    background-image: url('../images/headerBackground.png');
+    color: #ffffff;
+}
+
+.search__wrap {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.addMovie__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 177px;
+    height: 46px;
+    cursor: default;
+    color: #ffff;
+    border: 1px solid rgba(96, 96, 96, 0.68);
+    background: rgba(96, 96, 96, 0.9);
+    border-radius: 4px;
+    &:hover {
+        color: #ffffff;
+        border: 1px solid #979797;
+        background: rgba(96, 96, 96, 0.9);
+    }
+}
+
+.logo__wrap {
+    padding-top: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.logo {
+    display: flex;
+    color: #f65261;
+    padding-right: 600px;
+
+    .netflix__logo__net {
+        font-size: 30px;
+        font-weight: 900;
+        font-family: generalFontExtraBold;
+    }
+    .netflix__logo__roul {
+        font-size: 30px;
+        font-family: generalFont;
+    }
+}
+
+.search {
+    padding-top: 2vh;
+    width: 900px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    input {
+        width: 600px;
+        height: 50px;
+        font-weight: 400;
+        font-family: generalFont;
+        font-size: 20px;
+        line-height: 24px;
+        color: white;
+        background: rgba(50, 50, 50, 0.8);
+        mix-blend-mode: normal;
+        opacity: 0.7;
+        border-radius: 4px;
+    }
+}
+.searchButton {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    font-family: generalFont;
+    align-items: center;
+    border-radius: 4px;
+    background: #f65261;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 1px solid #f65261;
+    cursor: default;
+    &:hover {
+        background: peru;
+        border: 1px solid #979797;
+    }
+}
+
+.search__title {
+    width: 70%;
+    display: flex;
+    font-family: generalFont;
+    justify-content: flex-start;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+.searchResult {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
