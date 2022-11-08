@@ -8,7 +8,7 @@
     font-style: normal;
     display: flex;
     font-family: generalFont;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 24px;
     padding-left: 3%;
     color: #ffffff;
@@ -33,6 +33,7 @@
     object-fit: cover;
 }
 .film__inform {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -47,7 +48,7 @@
         color: #ffffff;
 
         mix-blend-mode: normal;
-        opacity: 0.7;
+        // opacity: 0.7;
     }
 
     .film__shrotDesc {
@@ -58,7 +59,7 @@
         line-height: 17px;
         color: #ffffff;
         mix-blend-mode: normal;
-        opacity: 0.5;
+        // opacity: 0.5;
     }
 
     .film__year {
@@ -66,7 +67,7 @@
         mix-blend-mode: normal;
         width: 66px;
         height: 26px;
-        opacity: 0.5;
+        //  opacity: 0.5;
         border: 1px solid #979797;
         border-radius: 4px;
         font-family: generalFont;
@@ -77,6 +78,6 @@
         text-align: center;
         color: #ffffff;
         mix-blend-mode: normal;
-        opacity: 0.7;
+        // opacity: 0.7;
     }
 }

@@ -3,6 +3,7 @@ import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import ErrorBoundary from './ErrorBoundary';
+import AddMovieModal from './AddMovieModal';
 
 class App extends Component {
     render() {
@@ -10,6 +11,7 @@ class App extends Component {
             <>
                 <div className="main">
                     <Header />
+
                     <ErrorBoundary>
                         <MainContent />
                     </ErrorBoundary>

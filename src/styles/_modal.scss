@@ -1,0 +1,225 @@
+.modal__wrapper {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100%;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.modal__body {
+    padding: 2% 2% 2% 2%;
+    width: 776px;
+    height: 717px;
+    background: #232323;
+    color: white;
+
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+.modal__header {
+    margin-top: 10%;
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.modal__content__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.modal__iput__wrapper {
+    width: 70%;
+}
+
+.filmTitileInput {
+    height: 37px;
+    background: rgba(50, 50, 50);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    width: 500px;
+    font-family: generalFont;
+    color: white;
+    border: 0;
+}
+
+.filmUrlnput {
+    height: 37px;
+    background: rgba(50, 50, 50);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    width: 500px;
+    font-family: generalFont;
+    color: white;
+    border: 0;
+}
+
+.filmRateInput {
+    height: 37px;
+    background: rgba(50, 50, 50);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    width: 200px;
+    font-family: generalFont;
+    color: white;
+    border: 0;
+    margin-right: 12px;
+}
+
+.filmRunTimeInput {
+    height: 37px;
+    background: rgba(50, 50, 50);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    width: 200px;
+    font-family: generalFont;
+    color: white;
+    border: 0;
+}
+
+.modal__iput__title {
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+    color: #f65261;
+    mix-blend-mode: normal;
+}
+.modal__genres__select {
+    background: rgba(50, 50, 50);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    width: 500px;
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    height: 37px;
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+    border: none;
+    color: #555555;
+}
+.filmOverviewInput {
+    height: 157px;
+    background: rgba(50, 50, 50);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    width: 730px;
+    font-family: generalFont;
+    color: white;
+    resize: none;
+}
+
+.customDatePicker {
+    background: rgba(50, 50, 50, 0.948044);
+    mix-blend-mode: normal;
+    border: 0;
+    border-radius: 4px;
+    height: 37px;
+    width: 200px;
+    color: #555555;
+}
+.modal__buttons {
+    margin-top: 3%;
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    .modal__button {
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #232323;
+        width: 150px;
+        height: 40px;
+        font-family: generalFont;
+        color: #f65261;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.07), 0px 10px 20px rgba(0, 0, 0, 0.05),
+            0px 10px 50px rgba(0, 0, 0, 0.05);
+        border: 2px solid #f65261;
+        &:hover {
+            background: #f65261;
+            color: white;
+            border: 2px solid #f65261;
+        }
+    }
+}
+
+.close__button {
+    margin-right: 20%;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+}
+.close__button:hover {
+    opacity: 1;
+    background-color: #f65261;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.close__button:before,
+.close__button:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: white;
+}
+.close__button:before {
+    transform: rotate(45deg);
+}
+.close__button:after {
+    transform: rotate(-45deg);
+}
+
+.DatePicker {
+    margin-left: 22px;
+    height: 37px;
+    background: rgba(50, 50, 50);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    border: 0;
+    font-family: generalFont;
+    color: white;
+    resize: none;
+    width: 200px;
+}
+
+.modal__iput__title__date {
+    margin-left: 20px;
+    font-family: generalFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.888889px;
+    text-transform: uppercase;
+    color: #f65261;
+    mix-blend-mode: normal;
+}
+
+.runtime__block {
+    margin-left: 25px;
+}
