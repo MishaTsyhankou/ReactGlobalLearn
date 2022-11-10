@@ -43,9 +43,17 @@ module.exports ={
            },
            {
            test: /\.(sa|sc|c)ss$/,
-           use: [
+          
+          use: [
                ( mode === 'development')? 'style-loader' : MiniCssExtractPlugin.loader,
-               'css-loader',
+               {
+            loader: 'css-loader',
+            options: {
+                modules: {
+                    localIdentName: '[name]__[local]--[hash:base64:5]'
+                }
+            }
+        },
                {
                    loader: "postcss-loader",
                    options: {
@@ -60,15 +68,14 @@ module.exports ={
                            ],
                        },
                    },
-               },
-               "sass-loader",
-
-
+               },          
+          "sass-loader",
            ]
        },
+      
            {
                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-               type: 'asset/resource',
+               type: 'asset/inline',
            },
            {
                test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -80,7 +87,15 @@ module.exports ={
                use: {
                    loader: 'babel-loader',
                    options: {
-                       presets: ['@babel/preset-env', ["@babel/preset-react", {"runtime": "automatic"}], "@babel/preset-typescript"]
+                       presets: ['@babel/preset-env', ["@babel/preset-react", {"runtime": "automatic"}], "@babel/preset-typescript"],
+                       plugins:  [
+                        [
+                            "@babel/plugin-transform-runtime",
+                            {
+                                "regenerator": true
+                            }
+                        ]
+                    ]
                    }
                }
            },

@@ -1,9 +1,13 @@
 @use 'global';
 @use 'fonts';
-@use 'main';
+@use '../Components/App/App.module.scss';
 @use '_header.scss';
 @use 'mainContent';
-@use 'navigation';
+
+@use '../Components/Header/Header.module.scss';
+@use '../Components/Search/Search.module.scss';
+
+@use '../Components/DropDown/DropDown.module.scss';
+@use '../Components/Sorter/Sorter.module.scss';
 @use 'filmDirectory';
-@use 'footer';
 @use 'modal';

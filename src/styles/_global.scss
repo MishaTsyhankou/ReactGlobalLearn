@@ -1,26 +1,12 @@
-$primaryColor: blue;
-$secondaryColor: blue;
-html {
-    overflow: scroll;
+body {
+    font-family: generalFont, sans-serif;
+    font-size: 20px;
+    scrollbar-gutter: stable;
     overflow-x: hidden;
-}
-::-webkit-scrollbar {
-    width: 0; /* Remove scrollbar space */
-    background: transparent; /* Optional: just make scrollbar invisible */
-}
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #ff0000;
-}
-
-h1 {
-    color: black;
-}
-
-.counter {
-    border: 1px solid red;
-    color: red;
-    h1 {
-        color: $secondaryColor;
+    margin: 0;
+    overflow-x: hidden;
+    margin: 0;
+    &.no-scroll {
+        overflow: hidden;
     }
 }
