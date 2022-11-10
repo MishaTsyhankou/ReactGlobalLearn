@@ -1,0 +1,10 @@
+.text {
+    margin: 0;
+    color: #f65261;
+    font-size: 20px;
+    font-weight: normal;
+
+    & > span {
+        font-weight: 900;
+    }
+}
