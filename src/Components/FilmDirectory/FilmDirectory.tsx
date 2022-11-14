@@ -11,6 +11,7 @@ interface FilmDirectoryProps {
     selectedGenre: string;
     searchValue: string;
     sort: string;
+    handleDetails: (arg: boolean, id: number) => void;
 }
 
 interface FilmData {
@@ -28,7 +29,7 @@ interface FilmData {
     runtime: number;
 }
 
-const FilmDirectory = ({ selectedGenre, searchValue, sort }: FilmDirectoryProps) => {
+const FilmDirectory = ({ selectedGenre, searchValue, sort, handleDetails }: FilmDirectoryProps) => {
     const [filteredFilms, setFilteredFilms] = useState(mockFilmData);
     const sortFilms = (filmArr: FilmData[], sort: string) => {
         switch (sort) {
@@ -58,7 +59,7 @@ const FilmDirectory = ({ selectedGenre, searchValue, sort }: FilmDirectoryProps)
     );
 
     const filmItems = filteredFilms.map((filmItem) => {
-        return <FilmItem {...filmItem} key={filmItem.id} />;
+        return <FilmItem {...filmItem} key={filmItem.id} handleDetails={handleDetails} />;
     });
     console.log(filteredFilms.length);
 

@@ -21,15 +21,17 @@ const options = [
 
 const ITEM_HEIGHT = 48;
 // @ts-ignore
-export default function ContextMenu({ setIsOpen }) {
+export default function ContextMenu({ handleModal }) {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [menu, setMenu] = React.useState('');
     const open = Boolean(anchorEl);
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
     };
-    const handleClose = () => {
+    const handleClose = (e: any) => {
         setAnchorEl(null);
+        e.value === 'Edit' ? handleModal(true, false) : handleModal(false, true);
+        console.log(e.value);
     };
     const handleOption = () => {};
 
@@ -57,12 +59,13 @@ export default function ContextMenu({ setIsOpen }) {
                     style: {
                         maxHeight: ITEM_HEIGHT * 4.5,
                         width: '20ch',
+                        color: 'red',
                     },
                 }}
             >
                 {options.map((option) => (
-                    <MenuItem key={option.id} selected={option.text === 'Pyxis'} onClick={handleClose}>
-                        <div onClick={() => setIsOpen(true)}>{option.text}</div>
+                    <MenuItem key={option.id} selected={option.text === 'Pyxis'} onClick={() => handleClose(option)}>
+                        <div onClick={() => console.log(option.text)}>{option.text}</div>
                     </MenuItem>
                 ))}
             </Menu>
