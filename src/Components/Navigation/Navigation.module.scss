@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: generalFont;
+    border-bottom: 1px solid #080707;
+}
+.active {
+    border-bottom: 1px solid #f65261;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    display: block;
+    padding: 20px 10px 20px 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+}

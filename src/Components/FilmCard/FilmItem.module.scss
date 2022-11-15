@@ -1,0 +1,43 @@
+.wrapper {
+    padding: 10px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 33.3%;
+    box-sizing: border-box;
+    & a {
+        text-decoration: none;
+        margin: 5px;
+    }
+}
+
+.image {
+    max-height: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+.title {
+    margin: 0;
+    font-size: 15px;
+}
+
+.genre {
+    font-size: 15px;
+}
+
+.year {
+    font-size: 15px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+}
