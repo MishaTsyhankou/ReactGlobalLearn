@@ -40,13 +40,6 @@ const FilmDetails = ({
     runtime,
     overview,
 }: FilmDetails) => {
-    // const optionItems = options.map((option) => (
-    //     <option key={option.value} value={option.value}>
-    //         {option.text}
-    //     </option>
-    // ));
-    console.log(title);
-
     return (
         <>
             <div className={styles.wrapper}>

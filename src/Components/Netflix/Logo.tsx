@@ -4,7 +4,10 @@ import styles from './Logo.module.scss';
 const Logo = () => {
     return (
         <h2 className={styles.text}>
-            <span>netflix</span>roulette
+            <span>
+                <b>netflix</b>
+            </span>
+            roulette
         </h2>
     );
 };
