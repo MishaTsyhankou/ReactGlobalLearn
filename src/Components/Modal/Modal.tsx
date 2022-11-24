@@ -18,7 +18,7 @@ interface options {
     'z-a': string[];
 }
 // @ts-ignore
-const AddMovieModal = ({ setIsOpen, modalTitle, isModalDelete }) => {
+const AddMovieModal = ({ setIsOpen, modalTitle, isModalDelete, setIsModalOpen }) => {
     const [startDate, setStartDate] = useState(null);
     const [title, setTitle] = useState('');
     const [url, setUrl] = useState('');

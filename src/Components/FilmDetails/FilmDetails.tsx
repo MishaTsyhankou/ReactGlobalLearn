@@ -1,7 +1,10 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import Logo from '../Netflix/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch, useSelector } from 'react-redux';
+
+import badLoad from '../../images/badLoad.jpeg';
 
 import React from 'react';
 
@@ -34,12 +37,15 @@ const FilmDetails = ({
     handleDetails,
     poster_path,
     title,
-    vote_average,
     genres,
     release_date,
     runtime,
+    vote_average,
     overview,
 }: FilmDetails) => {
+    const [imageFailed, setImageFailed] = useState(false);
+    const dispatch = useDispatch();
+
     return (
         <>
             <div className={styles.wrapper}>
@@ -53,7 +59,18 @@ const FilmDetails = ({
                 </div>
                 <div className={styles.content}>
                     <div className={styles.details__description__wrapp}>
-                        <img src={poster_path} className={styles.image} alt={title} />
+                        {!imageFailed ? (
+                            <img
+                                src={poster_path}
+                                className={styles.image}
+                                alt={title}
+                                onError={() => setImageFailed(true)}
+                                loading="lazy"
+                            />
+                        ) : (
+                            <img src={badLoad} alt={title} className={styles.image} loading="lazy" />
+                        )}
+                        {/* <img src={poster_path} className={styles.image} alt={title} /> */}
                         <div className={styles.description__wrapp}>
                             <div className={styles.description__header}>
                                 <div className={styles.filmTitle}>{title}</div>
@@ -61,7 +78,7 @@ const FilmDetails = ({
                                     <div className={styles.voteAverageStyle}>{vote_average}</div>
                                 </div>
                             </div>
-                            <div className={styles.genre}>{genres.join(', ')}</div>
+                            <div className={styles.genre}>{genres?.join(', ')}</div>
                             <div className={styles.description__time}>
                                 <div className={styles.year}>{release_date.slice(0, 4)}</div>
                                 <div className={styles.voteAverage}>

@@ -2,8 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 import FilmItem from '../FilmCard/FilmItem';
-import { mockFilmData } from '../mockData';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFilms } from '../../reducers/filmsSlice';
+import { RootState, AppDispatch } from '../../store/store';
 
 import styles from './FilmDirectory.module.scss';
 
@@ -14,7 +16,7 @@ interface FilmDirectoryProps {
     handleDetails: (arg: boolean, id: number) => void;
 }
 
-interface FilmData {
+export interface FilmData {
     id: number;
     title: string;
     tagline: string;
@@ -29,46 +31,53 @@ interface FilmData {
     runtime: number;
 }
 
-const FilmDirectory = ({ selectedGenre, searchValue, sort, handleDetails }: FilmDirectoryProps) => {
-    const [filteredFilms, setFilteredFilms] = useState(mockFilmData);
+const FilmDirectory = ({ searchValue, handleDetails }: FilmDirectoryProps) => {
+    const dispatch = useDispatch<AppDispatch>();
+    const films = useSelector((state: RootState) => state.films.films);
+    const sort = useSelector((state: RootState) => state.filters.sortBy);
+    const activeFilter = useSelector((state: RootState) => state.filters.activeFilter);
+    const [filteredFilms, setFilteredFilms] = useState([]);
     const sortFilms = (filmArr: FilmData[], sort: string) => {
         switch (sort) {
             case 'vote_average':
-                return filmArr.sort((a, b) => b.vote_average - a.vote_average);
+                return [...filmArr].sort((a, b) => b.vote_average - a.vote_average);
             case 'budget':
-                return filmArr.sort((a, b) => b.budget - a.budget);
+                return [...filmArr].sort((a, b) => b.budget - a.budget);
             case 'vote_count':
-                return filmArr.sort((a, b) => b.vote_count - a.vote_count);
+                return [...filmArr].sort((a, b) => b.vote_count - a.vote_count);
             case 'release_date':
+                return [...filmArr].sort((a, b) => {
+                    return new Date(a.release_date).getTime() - new Date(b.release_date).getTime();
+                });
             default:
-                return filmArr.sort((a, b) => new Date(b.release_date).getTime() - new Date(a.release_date).getTime());
+                return filmArr;
         }
     };
 
-    useEffect(
-        () =>
-            setFilteredFilms(
-                sortFilms(mockFilmData, sort).filter((film) =>
-                    !selectedGenre || selectedGenre === 'All'
-                        ? film.title.toLowerCase().includes(searchValue.toLowerCase())
-                        : film.title.toLowerCase().includes(searchValue.toLowerCase()) &&
-                          film.genres.includes(selectedGenre)
-                )
-            ),
-        [searchValue, selectedGenre, sort]
-    );
+    useEffect(() => {
+        dispatch(fetchFilms());
+    }, []);
+
+    useEffect(() => {
+        setFilteredFilms(
+            sortFilms(films, sort).filter((film) =>
+                !activeFilter || activeFilter === 'All'
+                    ? film.title.toLowerCase().includes(searchValue.toLowerCase())
+                    : film.title.toLowerCase().includes(searchValue.toLowerCase()) && film.genres.includes(activeFilter)
+            )
+        );
+    }, [searchValue, activeFilter, sort, films]);
 
     const filmItems = filteredFilms.map((filmItem) => {
         return <FilmItem {...filmItem} key={filmItem.id} handleDetails={handleDetails} />;
     });
-    console.log(filteredFilms.length);
 
     return (
         <>
             {filteredFilms.length ? (
                 <>
                     <div className={styles.searchResults}>
-                        <span>{mockFilmData.length}</span> movies found
+                        <span>{films.length}</span> movies found
                     </div>
                     <div className={styles.wrapper}>{filmItems}</div>
                 </>

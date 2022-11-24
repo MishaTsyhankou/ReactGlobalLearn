@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import FilmDirectory from '../FilmDirectory/FilmDirectory';
 import Navigation from '../Navigation/Navigation';
-import NavigationTest from '../Navigation/Navigation';
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import styles from './MainContent.module.scss';
 
 interface MainProps {

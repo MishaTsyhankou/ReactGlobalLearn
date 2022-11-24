@@ -1,6 +1,8 @@
 import { ChangeEvent } from 'react';
 import React from 'react';
 import { Dropdown } from '../DropDown/DropDown';
+import { sortChanged } from '../../reducers/filtersSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './Sorter.module.scss';
 
@@ -11,6 +13,7 @@ interface SortingProps {
 
 const Sorter = ({ sort, handleSorting }: SortingProps) => {
     const sortByParam = sort || 'release_date';
+    const dispatch = useDispatch();
 
     const sortByOptions = [
         {
@@ -32,8 +35,7 @@ const Sorter = ({ sort, handleSorting }: SortingProps) => {
     ];
 
     const onSortSelect = (e: ChangeEvent<HTMLSelectElement>) => {
-        handleSorting(e.target.value);
-        console.log('sort');
+        dispatch(sortChanged(e.target.value));
     };
 
     return (

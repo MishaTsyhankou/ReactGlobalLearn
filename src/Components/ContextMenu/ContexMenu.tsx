@@ -31,7 +31,6 @@ export default function ContextMenu({ handleModal }) {
     const handleClose = (e: any) => {
         setAnchorEl(null);
         e.value === 'Edit' ? handleModal(true, false) : handleModal(false, true);
-        console.log(e.value);
     };
     const handleOption = () => {};
 

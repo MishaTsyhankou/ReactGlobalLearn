@@ -1,6 +1,10 @@
 import { clsx } from 'clsx';
 import React, { useState } from 'react';
 import Sorter from '../Sorter/Sorter';
+import { filtersChanged } from '../../reducers/filtersSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
+
 import styles from './Navigation.module.scss';
 
 interface NavigationProps {
@@ -11,6 +15,8 @@ interface NavigationProps {
 }
 
 const Navigation = ({ selectedGenre, sort, handleToggle, handleSorting }: NavigationProps) => {
+    const dispatch = useDispatch();
+    const activeFilter = useSelector((state: RootState) => state.filters.activeFilter);
     const genres = [
         {
             id: 1,
@@ -34,8 +40,6 @@ const Navigation = ({ selectedGenre, sort, handleToggle, handleSorting }: Naviga
         },
     ];
 
-    const chosenGenre = selectedGenre ? selectedGenre : 'All';
-
     return (
         <div className={styles.wrapper}>
             <ul className={styles.menu}>
@@ -43,10 +47,10 @@ const Navigation = ({ selectedGenre, sort, handleToggle, handleSorting }: Naviga
                     return (
                         <li
                             role="menuitem"
-                            className={clsx(styles.item, chosenGenre === genre.name && styles.active)}
+                            className={clsx(styles.item, activeFilter === genre.name && styles.active)}
                             key={genre.id}
                             tabIndex={0}
-                            onClick={() => handleToggle(genre.name)}
+                            onClick={() => dispatch(filtersChanged(genre.name))}
                             onKeyDown={() => handleToggle(genre.name)}
                         >
                             <a className={styles.link} href="#genre.name">
