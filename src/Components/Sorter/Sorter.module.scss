@@ -1,0 +1,17 @@
+.sortingDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+.label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0.6;
+}

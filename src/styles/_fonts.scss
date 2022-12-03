@@ -1,4 +1,17 @@
+//@font-face {
+//  font-family: generalFont;
+//  src: url("../fonts/Prompt-Regular.ttf") format("truetype");
+//}
+
 @font-face {
-  font-family: generalFont;
-  src: url("../fonts/Prompt-Regular.ttf") format("truetype");
+    font-family: generalFont;
+    src: url('../fonts/Montserrat-Regular.otf') format('truetype');
+}
+@font-face {
+    font-family: generalFontExtraBold;
+    src: url('../fonts/MontserratAlternates-ExtraBold.otf') format('truetype');
+}
+@font-face {
+    font-family: generalFontBold;
+    src: url('../fonts/MontserratAlternates-Bold.otf') format('truetype');
 }
