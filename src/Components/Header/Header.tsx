@@ -21,7 +21,7 @@ const Header = ({ searchValue, handleSearch }: HeaderProps) => {
                     </button>
                 </div>
                 <SearchComponent searchValue={searchValue} handleSearch={handleSearch} />
-                {isModalOpen && <Modal setIsOpen={setIsOpen} modalTitle={'Add Movie'} />}
+                {isModalOpen && <Modal isModalDelete={false} id setIsOpen={setIsOpen} modalTitle={'Add Movie'} />}
             </div>
         </>
     );

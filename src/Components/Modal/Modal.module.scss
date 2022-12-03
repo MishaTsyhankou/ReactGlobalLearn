@@ -72,6 +72,17 @@
     border: 0;
 }
 
+.filmGenreInput {
+    height: 37px;
+    background-color: rgba(50, 50, 50);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    width: 300px;
+    font-family: generalFont;
+    color: black;
+    border: 0;
+}
+
 .filmRateInput {
     height: 37px;
     background: rgba(50, 50, 50);
@@ -155,6 +166,7 @@
     color: #555555;
 }
 .modal__buttons {
+    border: none;
     margin-top: 3%;
     display: flex;
 
@@ -239,4 +251,30 @@
     &:hover {
         color: #f65261;
     }
+}
+
+.errors {
+    font-size: 10px;
+    color: #f65261;
+}
+
+.button {
+    font-size: 20px;
+    color: #f65261;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    background: rgba(97, 97, 97, 0.678);
+    margin: 10px 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+        background: rgba(97, 97, 97, 0.9);
+        color: white;
+    }
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: flex-end;
 }

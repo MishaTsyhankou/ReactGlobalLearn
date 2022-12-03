@@ -3,6 +3,9 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFilms, addNewFilms, removeFilms, fetchCurrentFilm } from '../../reducers/filmsSlice';
+import { RootState, AppDispatch } from '../../store/store';
 
 import styles from './Context.module.scss';
 
@@ -21,15 +24,17 @@ const options = [
 
 const ITEM_HEIGHT = 48;
 // @ts-ignore
-export default function ContextMenu({ handleModal }) {
+export default function ContextMenu({ handleModal, id }) {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [menu, setMenu] = React.useState('');
     const open = Boolean(anchorEl);
+    const dispatch = useDispatch<AppDispatch>();
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = (e: any) => {
         setAnchorEl(null);
+        dispatch(fetchCurrentFilm(id));
         e.value === 'Edit' ? handleModal(true, false) : handleModal(false, true);
     };
     const handleOption = () => {};

@@ -35,7 +35,7 @@ const FilmItem = ({ id, title, poster_path, release_date, genres, handleDetails 
         setIsEdit(arg0);
         setIsDelete(arg1);
     };
-    const handleActiveFilm = (id) => {
+    const handleActiveFilm = (id: number) => {
         dispatch(activeFilm(id));
         handleDetails(true, id);
     };
@@ -43,8 +43,10 @@ const FilmItem = ({ id, title, poster_path, release_date, genres, handleDetails 
     return (
         <>
             <div className={styles.wrapper}>
-                <ContextMenu handleModal={handleModal} />
-                {isModalOpen && <Modal setIsOpen={setIsOpen} modalTitle={'Edit'} isModalDelete={isModalDelete} />}
+                <ContextMenu id={id} handleModal={handleModal} />
+                {isModalOpen && (
+                    <Modal id={id} setIsOpen={setIsOpen} modalTitle={'Edit'} isModalDelete={isModalDelete} />
+                )}
                 <a onClick={() => handleActiveFilm(id)} href="#">
                     {!imageFailed ? (
                         <img

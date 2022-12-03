@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import FilmItem from '../FilmCard/FilmItem';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFilms } from '../../reducers/filmsSlice';
+import { fetchFilms, addNewFilms } from '../../reducers/filmsSlice';
 import { RootState, AppDispatch } from '../../store/store';
 
 import styles from './FilmDirectory.module.scss';
@@ -56,6 +56,7 @@ const FilmDirectory = ({ searchValue, handleDetails }: FilmDirectoryProps) => {
 
     useEffect(() => {
         dispatch(fetchFilms());
+        //   ;
     }, []);
 
     useEffect(() => {
