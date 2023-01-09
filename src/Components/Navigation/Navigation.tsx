@@ -9,12 +9,11 @@ import styles from './Navigation.module.scss';
 
 interface NavigationProps {
     selectedGenre: string;
-    sort: string;
+
     handleToggle: (toggle: string) => void;
-    handleSorting: (sorter: string) => void;
 }
 
-const Navigation = ({ selectedGenre, sort, handleToggle, handleSorting }: NavigationProps) => {
+const Navigation = ({ selectedGenre, handleToggle }: NavigationProps) => {
     const dispatch = useDispatch();
     const activeFilter = useSelector((state: RootState) => state.filters.activeFilter);
     const genres = [
@@ -61,7 +60,7 @@ const Navigation = ({ selectedGenre, sort, handleToggle, handleSorting }: Naviga
                 })}
             </ul>
             <div className={styles.selector}>
-                <Sorter handleSorting={handleSorting} sort={sort} />
+                <Sorter />
             </div>
         </div>
     );

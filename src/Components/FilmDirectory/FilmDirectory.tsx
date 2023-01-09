@@ -6,15 +6,17 @@ import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFilms, addNewFilms } from '../../reducers/filmsSlice';
 import { RootState, AppDispatch } from '../../store/store';
+import { useLocation } from 'react-router-dom';
 
 import styles from './FilmDirectory.module.scss';
 
 interface FilmDirectoryProps {
     selectedGenre: string;
     searchValue: string;
-    sort: string;
     handleDetails: (arg: boolean, id: number) => void;
 }
+
+const useQuery = () => new URLSearchParams(useLocation().search);
 
 export interface FilmData {
     id: number;
@@ -37,6 +39,10 @@ const FilmDirectory = ({ searchValue, handleDetails }: FilmDirectoryProps) => {
     const sort = useSelector((state: RootState) => state.filters.sortBy);
     const activeFilter = useSelector((state: RootState) => state.filters.activeFilter);
     const [filteredFilms, setFilteredFilms] = useState([]);
+    const query = useQuery();
+    const sortTest = query.get('sortBy');
+    console.log(sortTest);
+
     const sortFilms = (filmArr: FilmData[], sort: string) => {
         switch (sort) {
             case 'vote_average':

@@ -1,7 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as events from 'events';
 import styles from './Search.module.scss';
+import { BrowserRouter as Router, Route, Routes, useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 
 interface SearchProps {
     searchValue: string;
@@ -9,12 +10,29 @@ interface SearchProps {
 }
 
 const Search = ({ searchValue, handleSearch }: SearchProps) => {
+    let [searchParams, setSearchParams] = useSearchParams();
+    let location = useLocation();
+    const searchTerm = searchParams.get('name');
+    const navigate = useNavigate();
     const onSearchValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        handleSearch(event.target.value);
+        const searchValue = event.target.value;
+
+        setSearchParams(searchValue);
+        handleSearch(searchValue);
     };
+    const onSearchClick = () => {
+        //setMovieDetails({ isMovieDetailsShowing: false, movieId: '' });
+        navigate('/search');
+    };
+
     const onSearchSubmit = (e: React.FormEvent) => {
         e.preventDefault();
     };
+
+    useEffect(() => {
+        // Google Analytics
+        console.log(location);
+    }, [location]);
     return (
         <div className={styles.wrapper}>
             <h1 className={styles.title}>Find your movie</h1>
@@ -23,10 +41,10 @@ const Search = ({ searchValue, handleSearch }: SearchProps) => {
                     className={styles.input}
                     type="search"
                     placeholder="What do you want to watch..."
-                    value={searchValue}
+                    value={location.search}
                     onChange={onSearchValueChange}
                 />
-                <button className={styles.button} type="submit">
+                <button onClick={onSearchClick} className={styles.button} type="submit">
                     Search
                 </button>
             </form>

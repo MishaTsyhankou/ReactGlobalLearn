@@ -3,6 +3,7 @@ import SearchComponent from '../Search/SearchComponent';
 import styles from './Header.module.scss';
 import Logo from '../Netflix/Logo';
 import Modal from '../Modal/Modal';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 interface HeaderProps {
     searchValue: string;
@@ -20,7 +21,9 @@ const Header = ({ searchValue, handleSearch }: HeaderProps) => {
                         + Add movie
                     </button>
                 </div>
+
                 <SearchComponent searchValue={searchValue} handleSearch={handleSearch} />
+
                 {isModalOpen && <Modal isModalDelete={false} id setIsOpen={setIsOpen} modalTitle={'Add Movie'} />}
             </div>
         </>

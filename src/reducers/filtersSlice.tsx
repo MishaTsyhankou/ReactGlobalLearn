@@ -4,7 +4,7 @@ import useHttp from '../Components/hooks/http.hooks';
 const initialState = {
     filtersLoadingStatus: 'idle',
     activeFilter: 'All',
-    sortBy: 'release_date',
+    sortBy: 'vote_average',
 };
 
 const filtersSlice = createSlice({

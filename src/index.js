@@ -5,10 +5,13 @@ import ReactDom from 'react-dom';
 import 'normalize.css';
 import App from './Components/App/App';
 import store from '../src/store/store';
+import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
 
 ReactDom.render(
     <Provider store={store}>
-        <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root')
 );

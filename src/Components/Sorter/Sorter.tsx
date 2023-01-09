@@ -3,17 +3,16 @@ import React from 'react';
 import { Dropdown } from '../DropDown/DropDown';
 import { sortChanged } from '../../reducers/filtersSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { RootState, AppDispatch } from '../../store/store';
+import { useNavigate } from 'react-router-dom';
 
 import styles from './Sorter.module.scss';
 
-interface SortingProps {
-    sort: string;
-    handleSorting: (sorter: string) => void;
-}
-
-const Sorter = ({ sort, handleSorting }: SortingProps) => {
-    const sortByParam = sort || 'release_date';
+const Sorter = ({}) => {
+    const sort = useSelector((state: RootState) => state.filters.sortBy);
+    const sortByParam = sort;
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const sortByOptions = [
         {
@@ -36,6 +35,7 @@ const Sorter = ({ sort, handleSorting }: SortingProps) => {
 
     const onSortSelect = (e: ChangeEvent<HTMLSelectElement>) => {
         dispatch(sortChanged(e.target.value));
+        navigate(`?sortBy=${e.target.value}`);
     };
 
     return (

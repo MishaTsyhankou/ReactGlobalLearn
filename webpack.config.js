@@ -24,6 +24,8 @@ module.exports ={
         port: 8080,
         hot: false,
         liveReload: true,
+        historyApiFallback: true,
+
     },
     devtool: 'source-map',
     plugins: [

@@ -1,10 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ContextMenu from '../ContextMenu/ContexMenu';
 import Modal from '../Modal/Modal';
 import badLoad from '../../images/badLoad.jpeg';
 import { useDispatch, useSelector } from 'react-redux';
 import { activeFilm } from '../../reducers/filmsSlice';
+import { BrowserRouter as Router, Route, Routes, Link, useSearchParams } from 'react-router-dom';
 
 import styles from './FilmItem.module.scss';
 interface FilmData {
@@ -30,6 +31,7 @@ const FilmItem = ({ id, title, poster_path, release_date, genres, handleDetails 
     const releaseDate = new Date(release_date).getFullYear();
     const [imageFailed, setImageFailed] = useState(false);
     const dispatch = useDispatch();
+
     const handleModal = (arg0?: any, arg1?: any) => {
         setIsOpen(true);
         setIsEdit(arg0);
@@ -47,7 +49,8 @@ const FilmItem = ({ id, title, poster_path, release_date, genres, handleDetails 
                 {isModalOpen && (
                     <Modal id={id} setIsOpen={setIsOpen} modalTitle={'Edit'} isModalDelete={isModalDelete} />
                 )}
-                <a onClick={() => handleActiveFilm(id)} href="#">
+
+                <Link onClick={() => handleActiveFilm(id)} to={`/movie/${id}`}>
                     {!imageFailed ? (
                         <img
                             src={poster_path}
@@ -67,7 +70,7 @@ const FilmItem = ({ id, title, poster_path, release_date, genres, handleDetails 
                         </div>
                         <div className={styles.year}>{releaseDate}</div>
                     </div>
-                </a>
+                </Link>
             </div>
         </>
     );
