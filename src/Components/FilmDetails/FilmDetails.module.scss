@@ -1,0 +1,125 @@
+.wrapper {
+    background: #232323;
+
+    background-size: cover;
+    padding: 20px;
+    border-bottom: 10px solid #888888;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080px;
+}
+.details__header__wrapp {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080px;
+}
+
+.button {
+    font-size: 20px;
+    color: #f65261;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    background: rgba(97, 97, 97, 0.678);
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+        background: rgba(97, 97, 97, 0.9);
+        color: white;
+    }
+}
+.image {
+    display: block;
+    width: 325px;
+    height: 450px;
+}
+
+.details__description__wrapp {
+    margin-top: 10px;
+    display: flex;
+    .description__header {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        width: 70%;
+        font-size: 40px;
+        text-transform: uppercase;
+        .filmTitle {
+            overflow: hidden;
+
+            padding: 10px 10px 10px 0px;
+        }
+        .voteAverage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .voteAverageStyle {
+                border-radius: 50%;
+                padding: 10px 10px 10px 10px;
+                border: 1px solid white;
+
+                font-size: 20px;
+            }
+        }
+    }
+}
+.description__time {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    font-size: 24px;
+
+    .year {
+        color: #f65261;
+    }
+    .voteAverage {
+        color: #f65261;
+    }
+}
+.description__wrapp {
+    margin-left: 3%;
+}
+
+.genre {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.description___article {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.lookup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #f65261;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #232323;
+    &:hover {
+        color: white;
+        border: 1px solid white;
+    }
+}

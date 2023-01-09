@@ -1,0 +1,31 @@
+.select {
+    cursor: pointer;
+    padding: 15px 40px 15px 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-left: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 3px;
+    appearance: none;
+    color: #ffffff;
+    background-color: #232323;
+}
+
+.dropdown {
+    position: relative;
+    z-index: 9;
+    .icon {
+        padding-top: 5px;
+        margin-right: 10px;
+        pointer-events: none;
+        position: absolute;
+        top: 13px;
+        inset-inline-end: 12px;
+    }
+}
