@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    color: #f65261;
+    font-size: 70px;
+
+    & > span {
+        font-family: generalFontBold;
+    }
+    background: #232323;
+}
+
+.badLoad {
+    flex-shrink: 0;
+    min-height: 509px;
+    max-width: 50%;
+    object-fit: cover;
+}

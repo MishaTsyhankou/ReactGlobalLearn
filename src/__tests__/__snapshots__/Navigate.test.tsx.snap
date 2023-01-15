@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigate /> should match snapshot 1`] = `
+<div>
+  <div
+    class="wrapper"
+  >
+    <ul
+      class="menu"
+    >
+      <li
+        class="item active"
+        role="menuitem"
+        tabindex="0"
+      >
+        <a
+          class="link"
+        >
+          All
+        </a>
+      </li>
+      <li
+        class="item inActive"
+        role="menuitem"
+        tabindex="0"
+      >
+        <a
+          class="link"
+        >
+          Documentary
+        </a>
+      </li>
+      <li
+        class="item inActive"
+        role="menuitem"
+        tabindex="0"
+      >
+        <a
+          class="link"
+        >
+          Comedy
+        </a>
+      </li>
+      <li
+        class="item inActive"
+        role="menuitem"
+        tabindex="0"
+      >
+        <a
+          class="link"
+        >
+          Horror
+        </a>
+      </li>
+      <li
+        class="item inActive"
+        role="menuitem"
+        tabindex="0"
+      >
+        <a
+          class="link"
+        >
+          Crime
+        </a>
+      </li>
+    </ul>
+    <div>
+      <div
+        class="sortingDropdown"
+      >
+        <label
+          class="label"
+          for="sortingDropdown"
+        >
+          Sort by:
+        </label>
+        <div
+          class="dropdown"
+        >
+          <select
+            class="select"
+            id="sortingDropdown"
+          >
+            <option
+              value="release_date"
+            >
+              release date
+            </option>
+            <option
+              value="budget"
+            >
+              budget
+            </option>
+            <option
+              value="vote_average"
+            >
+              rating
+            </option>
+            <option
+              value="vote_count"
+            >
+              popularity
+            </option>
+          </select>
+          <img
+            alt=""
+            class="icon"
+            height="10"
+            src="[object Object]"
+            width="22"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sorter /> should match snapshot 1`] = `
+<div>
+  <div
+    class="sortingDropdown"
+  >
+    <label
+      class="label"
+      for="sortingDropdown"
+    >
+      Sort by:
+    </label>
+    <div
+      class="dropdown"
+    >
+      <select
+        class="select"
+        id="sortingDropdown"
+      >
+        <option
+          value="release_date"
+        >
+          release date
+        </option>
+        <option
+          value="budget"
+        >
+          budget
+        </option>
+        <option
+          value="vote_average"
+        >
+          rating
+        </option>
+        <option
+          value="vote_count"
+        >
+          popularity
+        </option>
+      </select>
+      <img
+        alt=""
+        class="icon"
+        height="10"
+        src="[object Object]"
+        width="22"
+      />
+    </div>
+  </div>
+</div>
+`;

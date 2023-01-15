@@ -1,0 +1,39 @@
+.wrapper {
+    margin: 60px auto;
+    width: 70%;
+    max-width: 1080px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #323232;
+    border: none;
+}
+
+.button {
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 15px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #f65261;
+    border: none;
+}
+
+.search {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
