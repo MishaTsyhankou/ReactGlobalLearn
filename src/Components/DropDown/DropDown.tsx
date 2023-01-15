@@ -5,13 +5,13 @@ import ChevronDown from '../../images/chevron.svg';
 import styles from './DropDown.module.scss';
 
 interface DropdownProps {
-    options: {
+    options?: {
         value: string;
         text: string;
     }[];
-    selected: string;
+    selected?: string;
     id?: string;
-    onChange: (e: ChangeEvent<HTMLSelectElement>) => void;
+    onChange?: (e: ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export const Dropdown = ({ options, selected, onChange, id }: DropdownProps) => {

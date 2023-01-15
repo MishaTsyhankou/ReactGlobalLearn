@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should match snapshot 1`] = `
+<div>
+  <div
+    class="wrapper"
+  >
+    <h2
+      class="text"
+    >
+      <span>
+        <b>
+          netflix
+        </b>
+      </span>
+      roulette
+    </h2>
+  </div>
+</div>
+`;

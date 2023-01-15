@@ -6,8 +6,8 @@ import Modal from '../Modal/Modal';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 interface HeaderProps {
-    searchValue: string;
-    handleSearch: (arg0: string) => void;
+    searchValue?: string;
+    handleSearch?: (arg0: string) => void;
 }
 
 const Header = ({ searchValue, handleSearch }: HeaderProps) => {

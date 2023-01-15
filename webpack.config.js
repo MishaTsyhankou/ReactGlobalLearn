@@ -101,6 +101,20 @@ module.exports ={
                    }
                }
            },
+           {
+            test: /\.svg$/,
+            use: [
+              {
+                loader: 'react-svg-loader',
+                options: {
+                  svgo: {
+                    plugins: [{ removeTitle: false }],
+                    floatPrecision: 2
+                  }
+                }
+              }
+            ]
+          }
 
 
 
